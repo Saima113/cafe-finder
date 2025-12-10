@@ -1,4 +1,4 @@
-const apiKey = CONFIG.GOOGLE_MAPS_API_KEY;
+const apiKey = CONFIG.apiKey;
 let allCafes = []; // Store all cafes for filtering
 let currentLocation = { lat: 0, lng: 0 };
 
