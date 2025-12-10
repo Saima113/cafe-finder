@@ -1,0 +1,107 @@
+body {
+  background-color: #d2e894ff;
+
+  /* makes it fill the whole screen */
+  background-position: center; /* centers it */
+  background-repeat: no-repeat; /* no tile repeating */
+
+  font-family: "Arsenal-Bold", sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+button {
+  font-family: "Arsenal-Bold", sans-serif;
+  font-size: 20px;
+  background-color: #a98467;
+  color: white;
+  border-radius: 10vw;
+  padding: 1vw;
+  outline-style: none;
+  border: none;
+}
+
+.bottom-image {
+  display: block;
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+/* .center-box {
+            flex: 1;
+            background: linear-gradient(to bottom right, #c9a8b8, #b89aaa);
+            border-radius: 20px;
+            padding: 30px 50px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        } */
+
+.cards {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto;
+  height: 400px;
+}
+.swipe-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.location-card p:last-child {
+  display: block;
+}
+
+.location-card p:last-child ~ p {
+  display: none;
+}
+.location-card {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1vh;
+}
+.location-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6c584c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-family: "Arsenal-Bold", sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: bottom 0.3s ease;
+  z-index: 1000;
+  white-space: nowrap;
+}
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 20px auto;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.toast.show {
+  bottom: 30px;
+}
+button:hover {
+  background: #6c584c;
+}
