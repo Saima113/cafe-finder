@@ -1,4 +1,4 @@
-const apiKey = CONFIG.apiKey;
+const apiKey = config.apiKey;
 let allCafes = []; // Store all cafes for filtering
 let currentLocation = { lat: 0, lng: 0 };
 
