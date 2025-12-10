@@ -125,22 +125,38 @@ button:hover {
   }
 
   .cards {
-    max-width: 90%;
-    height: 350px;
+    max-width: 95%;
+    width: 95%;
+    height: auto;
+    min-height: 350px;
     margin: 1rem auto;
+    left: 0;
+    right: 0;
+  }
+
+  .swipe-wrapper {
+    left: 0;
+    right: 0;
   }
 
   .location-card {
     padding: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .location-card img {
-    height: 120px;
+    height: 180px;
   }
 
   .filter-controls {
     gap: 10px;
     margin: 10px auto 15px auto;
+    flex-direction: column;
+  }
+
+  .filter-controls > div {
+    width: 100%;
   }
 
   .toast {
