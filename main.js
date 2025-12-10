@@ -301,7 +301,7 @@ function displayCards(cafes) {
       <img src="${imgUrl}" alt="${cafeData.name}" />
       <h3>${cafeData.name}</h3>
       <p>⭐️ Rating: ${cafeData.rating}</p>
-      <p><small>Swipe right to save 💖</small></p>
+      <p><small>Swipe right to save </small></p>
     `;
 
     const hammertime = new Hammer(wrapper);
