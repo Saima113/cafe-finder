@@ -223,7 +223,7 @@ function showFilterControls() {
         <option value="reviews">Most Reviewed</option>
       </select>
     </label>
-    // <button onclick="showMap()">📍 Map View</button>
+    
   `;
 
   const container = document.querySelector(".cards");
