@@ -1,6 +1,30 @@
-const apiKey = config.apiKey;
-let allCafes = []; // Store all cafes for filtering
+// Variables
+let apiKey; // Will be loaded from API
+let allCafes = []; 
 let currentLocation = { lat: 0, lng: 0 };
+
+// Load API key from serverless function
+async function loadConfig() {
+  try {
+    const response = await fetch('/api/config');
+    const config = await response.json();
+    apiKey = config.googleMapsApiKey;
+    console.log('API key loaded successfully');
+    return true;
+  } catch (error) {
+    console.error('Failed to load API key:', error);
+    alert('Failed to load configuration. Please refresh the page.');
+    return false;
+  }
+}
+
+// Initialize app - load config then get location
+async function init() {
+  const configLoaded = await loadConfig();
+  if (configLoaded) {
+    getLocation();
+  }
+}
 
 function getLocation() {
   console.log("Getting your location to find cafes...");
@@ -58,7 +82,7 @@ async function searchCitywide(lat, lng, cityName) {
   const container = document.querySelector(".cards");
   container.innerHTML = `
     <div style="text-align: center; padding: 40px;">
-      <div style="font-size: 60px;"></div>
+      <div style="font-size: 60px;">☕</div>
       <p style="font-size: 18px; margin-top: 20px;">Finding cafes in ${cityName}...</p>
     </div>
   `;
@@ -431,4 +455,11 @@ function showSaved() {
     `;
     container.appendChild(card);
   });
+}
+
+// Start the app when page loads
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
 }
