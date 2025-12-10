@@ -37,15 +37,11 @@ button {
   max-width: 300px;
   margin: 2rem auto;
   height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }
 .swipe-wrapper {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -129,19 +125,18 @@ button:hover {
   }
 
   .cards {
-    max-width: 90%;
-    width: 90%;
+    max-width: 95%;
+    width: 95%;
     height: auto;
     min-height: 350px;
     margin: 1rem auto;
-    display: flex;
-    justify-content: center;
+    left: 0;
+    right: 0;
   }
 
   .swipe-wrapper {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   .location-card {
