@@ -29,13 +29,7 @@ button {
   object-fit: cover;
   object-position: center;
 }
-/* .center-box {
-            flex: 1;
-            background: linear-gradient(to bottom right, #c9a8b8, #b89aaa);
-            border-radius: 20px;
-            padding: 30px 50px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-        } */
+
 
 .cards {
   position: relative;
